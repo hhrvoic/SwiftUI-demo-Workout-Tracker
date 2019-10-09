@@ -55,3 +55,9 @@ extension Mood {
     }
     
 }
+
+extension Mood: Identifiable {
+    var id: Int {
+        return rawValue
+    }
+}
