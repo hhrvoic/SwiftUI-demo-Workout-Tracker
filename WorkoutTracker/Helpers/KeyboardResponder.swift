@@ -19,20 +19,21 @@ class KeyboardResponder: ObservableObject {
 
     init(notificationCenter: NotificationCenter = .default) {
         self.notificationCenter = notificationCenter
+        subscribeToKeyboardChanges()
     }
 
 }
 
-extension KeyboardResponder {
+private extension KeyboardResponder {
     
     func subscribeToKeyboardChanges() {
-        let showSize = NotificationCenter.default
+        let showSize = notificationCenter
             .publisher(for: UIResponder.keyboardWillShowNotification)
             .map { $0.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue }
             .map { $0?.cgRectValue }
             .map { $0?.height ?? 0 }
         
-        let hideSize = NotificationCenter.default
+        let hideSize = notificationCenter
             .publisher(for: UIResponder.keyboardWillHideNotification)
             .map { _ in CGFloat(0) }
             

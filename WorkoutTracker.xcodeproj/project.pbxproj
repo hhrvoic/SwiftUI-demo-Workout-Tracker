@@ -21,6 +21,8 @@
 		528CBF88234DDB2900DE154C /* WorkoutHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CBF82234DDB2900DE154C /* WorkoutHistoryModel.swift */; };
 		528CBF89234DDB2900DE154C /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CBF83234DDB2900DE154C /* Mood.swift */; };
 		52DDD238234E0E0900A90010 /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDD237234E0E0900A90010 /* LineTextField.swift */; };
+		52DDD23B234E188B00A90010 /* LogWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDD23A234E188B00A90010 /* LogWorkout.swift */; };
+		52DDD23D234F0BB900A90010 /* LogWorkoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDD23C234F0BB900A90010 /* LogWorkoutButton.swift */; };
 		52EDBBD4234DE1400045A952 /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDBBD3234DE1400045A952 /* MoodView.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		528CBF82234DDB2900DE154C /* WorkoutHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryModel.swift; sourceTree = "<group>"; };
 		528CBF83234DDB2900DE154C /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		52DDD237234E0E0900A90010 /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
+		52DDD23A234E188B00A90010 /* LogWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWorkout.swift; sourceTree = "<group>"; };
+		52DDD23C234F0BB900A90010 /* LogWorkoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWorkoutButton.swift; sourceTree = "<group>"; };
 		52EDBBD3234DE1400045A952 /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +78,7 @@
 		528CBF65234DD1BB00DE154C /* WorkoutTracker */ = {
 			isa = PBXGroup;
 			children = (
+				52DDD239234E187C00A90010 /* Modules */,
 				528CBF8A234DDB6A00DE154C /* Views */,
 				528CBF7F234DDB2900DE154C /* Extensions */,
 				528CBF7A234DDB2900DE154C /* Helpers */,
@@ -81,7 +86,6 @@
 				528CBF81234DDB2900DE154C /* Models */,
 				528CBF66234DD1BB00DE154C /* AppDelegate.swift */,
 				528CBF68234DD1BB00DE154C /* SceneDelegate.swift */,
-				528CBF6A234DD1BB00DE154C /* ContentView.swift */,
 				528CBF6C234DD1BB00DE154C /* Assets.xcassets */,
 				528CBF71234DD1BB00DE154C /* LaunchScreen.storyboard */,
 				528CBF74234DD1BB00DE154C /* Info.plist */,
@@ -140,6 +144,16 @@
 				52EDBBD3234DE1400045A952 /* MoodView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		52DDD239234E187C00A90010 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				528CBF6A234DD1BB00DE154C /* ContentView.swift */,
+				52DDD23A234E188B00A90010 /* LogWorkout.swift */,
+				52DDD23C234F0BB900A90010 /* LogWorkoutButton.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +231,7 @@
 				528CBF89234DDB2900DE154C /* Mood.swift in Sources */,
 				528CBF84234DDB2900DE154C /* KeyboardResponder.swift in Sources */,
 				528CBF88234DDB2900DE154C /* WorkoutHistoryModel.swift in Sources */,
+				52DDD23D234F0BB900A90010 /* LogWorkoutButton.swift in Sources */,
 				528CBF69234DD1BB00DE154C /* SceneDelegate.swift in Sources */,
 				528CBF6B234DD1BB00DE154C /* ContentView.swift in Sources */,
 				5237693D234E0CA900925D86 /* MoodPickerView.swift in Sources */,
@@ -225,6 +240,7 @@
 				528CBF87234DDB2900DE154C /* ColorExtension.swift in Sources */,
 				528CBF85234DDB2900DE154C /* UserStorage.swift in Sources */,
 				52EDBBD4234DE1400045A952 /* MoodView.swift in Sources */,
+				52DDD23B234E188B00A90010 /* LogWorkout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
