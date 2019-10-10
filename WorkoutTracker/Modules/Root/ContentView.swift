@@ -19,7 +19,7 @@ struct ContentView: View {
                 Image(systemName: "plus.circle")
             }
             
-          Text("Workout history (TBD)")
+            WorkoutHistory()
                 .tabItem {
                     Image(systemName: "calendar")
             }

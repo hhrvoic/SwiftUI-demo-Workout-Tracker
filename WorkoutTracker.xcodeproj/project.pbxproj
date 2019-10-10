@@ -20,6 +20,8 @@
 		528CBF87234DDB2900DE154C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CBF80234DDB2900DE154C /* ColorExtension.swift */; };
 		528CBF88234DDB2900DE154C /* WorkoutHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CBF82234DDB2900DE154C /* WorkoutHistoryModel.swift */; };
 		528CBF89234DDB2900DE154C /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CBF83234DDB2900DE154C /* Mood.swift */; };
+		529F9791234F2B600002BF7C /* WorkoutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F9790234F2B600002BF7C /* WorkoutRow.swift */; };
+		529F9793234F2D2F0002BF7C /* WorkoutHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F9792234F2D2F0002BF7C /* WorkoutHistory.swift */; };
 		52DDD238234E0E0900A90010 /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDD237234E0E0900A90010 /* LineTextField.swift */; };
 		52DDD23B234E188B00A90010 /* LogWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDD23A234E188B00A90010 /* LogWorkout.swift */; };
 		52DDD23D234F0BB900A90010 /* LogWorkoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDD23C234F0BB900A90010 /* LogWorkoutButton.swift */; };
@@ -42,6 +44,8 @@
 		528CBF80234DDB2900DE154C /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		528CBF82234DDB2900DE154C /* WorkoutHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryModel.swift; sourceTree = "<group>"; };
 		528CBF83234DDB2900DE154C /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		529F9790234F2B600002BF7C /* WorkoutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRow.swift; sourceTree = "<group>"; };
+		529F9792234F2D2F0002BF7C /* WorkoutHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistory.swift; sourceTree = "<group>"; };
 		52DDD237234E0E0900A90010 /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
 		52DDD23A234E188B00A90010 /* LogWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWorkout.swift; sourceTree = "<group>"; };
 		52DDD23C234F0BB900A90010 /* LogWorkoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWorkoutButton.swift; sourceTree = "<group>"; };
@@ -79,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				52DDD239234E187C00A90010 /* Modules */,
-				528CBF8A234DDB6A00DE154C /* Views */,
+				528CBF8A234DDB6A00DE154C /* Common Views */,
 				528CBF7F234DDB2900DE154C /* Extensions */,
 				528CBF7A234DDB2900DE154C /* Helpers */,
 				528CBF7C234DDB2900DE154C /* Managers */,
@@ -136,22 +140,48 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		528CBF8A234DDB6A00DE154C /* Views */ = {
+		528CBF8A234DDB6A00DE154C /* Common Views */ = {
 			isa = PBXGroup;
 			children = (
 				52DDD237234E0E0900A90010 /* LineTextField.swift */,
 				5237693C234E0CA900925D86 /* MoodPickerView.swift */,
 				52EDBBD3234DE1400045A952 /* MoodView.swift */,
 			);
-			path = Views;
+			path = "Common Views";
+			sourceTree = "<group>";
+		};
+		529F978E234F2B0A0002BF7C /* LogWorkout */ = {
+			isa = PBXGroup;
+			children = (
+				52DDD23A234E188B00A90010 /* LogWorkout.swift */,
+				52DDD23C234F0BB900A90010 /* LogWorkoutButton.swift */,
+			);
+			path = LogWorkout;
+			sourceTree = "<group>";
+		};
+		529F978F234F2B2E0002BF7C /* History */ = {
+			isa = PBXGroup;
+			children = (
+				529F9790234F2B600002BF7C /* WorkoutRow.swift */,
+				529F9792234F2D2F0002BF7C /* WorkoutHistory.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		529F9794234F2E710002BF7C /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				528CBF6A234DD1BB00DE154C /* ContentView.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		52DDD239234E187C00A90010 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				528CBF6A234DD1BB00DE154C /* ContentView.swift */,
-				52DDD23A234E188B00A90010 /* LogWorkout.swift */,
-				52DDD23C234F0BB900A90010 /* LogWorkoutButton.swift */,
+				529F9794234F2E710002BF7C /* Root */,
+				529F978F234F2B2E0002BF7C /* History */,
+				529F978E234F2B0A0002BF7C /* LogWorkout */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -228,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				528CBF67234DD1BB00DE154C /* AppDelegate.swift in Sources */,
+				529F9791234F2B600002BF7C /* WorkoutRow.swift in Sources */,
 				528CBF89234DDB2900DE154C /* Mood.swift in Sources */,
 				528CBF84234DDB2900DE154C /* KeyboardResponder.swift in Sources */,
 				528CBF88234DDB2900DE154C /* WorkoutHistoryModel.swift in Sources */,
@@ -238,6 +269,7 @@
 				52DDD238234E0E0900A90010 /* LineTextField.swift in Sources */,
 				528CBF86234DDB2900DE154C /* HistoryStore.swift in Sources */,
 				528CBF87234DDB2900DE154C /* ColorExtension.swift in Sources */,
+				529F9793234F2D2F0002BF7C /* WorkoutHistory.swift in Sources */,
 				528CBF85234DDB2900DE154C /* UserStorage.swift in Sources */,
 				52EDBBD4234DE1400045A952 /* MoodView.swift in Sources */,
 				52DDD23B234E188B00A90010 /* LogWorkout.swift in Sources */,
