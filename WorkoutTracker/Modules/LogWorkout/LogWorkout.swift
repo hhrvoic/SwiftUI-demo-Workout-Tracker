@@ -35,7 +35,6 @@ struct LogWorkout: View {
                 Spacer()
                 
                 LogWorkoutButton(mood: $mood,
-                                 description: $description,
                                  action: {
                                     self.logWorkout(mood: self.mood, description: self.description)
                 })

@@ -13,10 +13,12 @@ struct MoodView: View {
     
     private let mood: Mood
     private let isSelected: Bool
+    private let scaledWhenSelected: Bool
     
-    init(mood: Mood, isSelected: Bool = true) {
+    init(mood: Mood, isSelected: Bool = true, scaledWhenSelected: Bool = true) {
         self.mood = mood
         self.isSelected = isSelected
+        self.scaledWhenSelected = scaledWhenSelected
     }
 
     var body: some View {
@@ -31,6 +33,7 @@ struct MoodView: View {
         
             mood.icon
         }
+        .scaleEffect(scaledWhenSelected && isSelected ? 1.15 : 1.0)
     }
 }
 

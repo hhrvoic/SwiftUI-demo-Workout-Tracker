@@ -10,7 +10,6 @@ import SwiftUI
 
 struct LogWorkoutButton: View {
     @Binding var mood: Mood
-    @Binding var description: String
     var action: () -> Void
 
     var body: some View {
@@ -34,7 +33,7 @@ struct LogWorkoutButton: View {
 
 struct LogWorkoutButton_Previews: PreviewProvider {
     static var previews: some View {
-        LogWorkoutButton(mood: .constant(.good), description: .constant("Log workout"), action: {
+        LogWorkoutButton(mood: .constant(.good), action: {
             print("Log workout tapped")
         })
     }

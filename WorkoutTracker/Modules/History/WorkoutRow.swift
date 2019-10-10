@@ -14,7 +14,7 @@ struct WorkoutRow: View {
 
     var body: some View {
         HStack {
-            MoodView(mood: model.mood)
+            MoodView(mood: model.mood, scaledWhenSelected: false)
             VStack(alignment: .leading, spacing: 6) {
                 Text(model.description)
                     .font(.headline)
