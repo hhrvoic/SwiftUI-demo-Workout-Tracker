@@ -17,14 +17,15 @@ struct ContentView: View {
             LogWorkout()
             .tabItem {
                 Image(systemName: "plus.circle")
+                .font(.title) // Make icon bigger
             }
             
             WorkoutHistory()
                 .tabItem {
                     Image(systemName: "calendar")
+                .font(.title)
             }
         }
-        .font(.title) // Make icons bigger
         .accentColor(Color(.systemOrange))
     }
 }

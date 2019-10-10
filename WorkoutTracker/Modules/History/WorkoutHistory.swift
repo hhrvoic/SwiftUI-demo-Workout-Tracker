@@ -27,7 +27,6 @@ struct WorkoutHistory: View {
             .alert(isPresented: $showingDeletionAlert, content: deletionAlert)
         }
     }
-   
 }
 
 struct WorkoutHistory_Previews: PreviewProvider {
