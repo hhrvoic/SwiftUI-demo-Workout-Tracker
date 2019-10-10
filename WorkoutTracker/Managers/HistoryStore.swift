@@ -57,7 +57,7 @@ extension HistoryStore {
     
 }
 
-private extension HistoryStore {
+extension HistoryStore {
     
     func deleteWorkout(at index: Int) {
         guard

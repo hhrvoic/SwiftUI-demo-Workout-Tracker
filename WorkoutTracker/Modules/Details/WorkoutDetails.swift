@@ -23,8 +23,7 @@ struct WorkoutDetails: View {
                 .foregroundColor(.secondary)
             
             Text(workout.description)
-                .font(.body)
-                .bold()
+                .font(.headline)
             
             Spacer()
         }
