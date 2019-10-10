@@ -31,10 +31,8 @@ struct WorkoutRow: View {
 
 struct WorkoutRow_Previews: PreviewProvider {
    static var previews: some View {
-        let model = WorkoutHistoryModel(mood: .good, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.")
         return List {
-            WorkoutRow(model: model)
-            WorkoutRow(model: model)
+            ForEach(0...5, id: \.self) { _ in return WorkoutRow(model: .random()) }
         }
     }
 }

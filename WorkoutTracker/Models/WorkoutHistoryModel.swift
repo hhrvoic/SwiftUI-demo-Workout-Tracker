@@ -1,3 +1,4 @@
+
 //
 //  WorkoutHistoryModel.swift
 //  WorkoutTracker
@@ -50,4 +51,12 @@ extension WorkoutHistoryModel {
             .joined(separator: " ")
     }
     
+}
+
+extension WorkoutHistoryModel {
+    static func random() -> WorkoutHistoryModel {
+        let mood = Mood(rawValue: Int.random(in: 0 ... Mood.allCases.count - 1))!
+        let model = WorkoutHistoryModel(mood: mood, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.")
+        return model
+    }
 }
