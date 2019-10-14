@@ -13,14 +13,14 @@ struct LogWorkoutButton: View {
     var action: () -> Void
 
     var body: some View {
-        GeometryReader { proxy in
+        GeometryReader { parent in
             Button(
                 action: {
                     self.action()
             },
                 label: {
                     Text("LOG WORKOUT")
-                        .frame(width: proxy.size.width, height: 53)
+                        .frame(width: parent.size.width, height: 53)
             })
                 .padding(.horizontal, -24)
                 .background(self.mood.selectedColor)

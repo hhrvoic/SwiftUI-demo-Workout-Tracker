@@ -27,6 +27,6 @@ struct MoodPickerView: View {
 
 struct MoodPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        MoodPickerView(selectedMood: .constant(.crushed))
+        MoodPickerView(selectedMood: .constant(.neutral))
     }
 }

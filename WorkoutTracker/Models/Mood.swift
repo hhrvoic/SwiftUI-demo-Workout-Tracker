@@ -22,18 +22,6 @@ enum Mood: Int, Codable, CaseIterable {
 
 extension Mood {
     
-    var detailsDelay: Double {
-        return 0.25
-    }
-    
-    var homeDelay: Double {
-        return detailsDelay + 0.03 * Double(Mood.allCases.count - rawValue)
-    }
-    
-}
-
-extension Mood {
-    
     var selectedColor: Color {
         switch self {
         case .excellent: return Color(rgbHex: 0x33d827)

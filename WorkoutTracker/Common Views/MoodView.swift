@@ -24,13 +24,13 @@ struct MoodView: View {
     var body: some View {
         ZStack {
             Circle()
-            .frame(width: 56, height: 56)
-                .foregroundColor(isSelected ? mood.selectedColor : Color(.systemGray3))
+                .frame(width: 56, height: 56)
+                .foregroundColor(isSelected ? mood.selectedColor : Color(.systemGray3)) // Border circle
             Circle()
-             .frame(width: isSelected ? 46 : 50,
-                    height: isSelected ? 46 : 50)
-                .foregroundColor(Color(.systemBackground))
-        
+                .frame(width: isSelected ? 46 : 50,
+                       height: isSelected ? 46 : 50)
+                .foregroundColor(Color(.systemBackground)) // Fill circle
+            
             mood.icon
         }
         .scaleEffect(scaledWhenSelected && isSelected ? 1.15 : 1.0)
