@@ -51,6 +51,7 @@
 		52DDD237234E0E0900A90010 /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
 		52DDD23A234E188B00A90010 /* LogWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWorkout.swift; sourceTree = "<group>"; };
 		52DDD23C234F0BB900A90010 /* LogWorkoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWorkoutButton.swift; sourceTree = "<group>"; };
+		52ED73F623573CEC00C7ADAF /* WorkoutTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorkoutTracker.entitlements; sourceTree = "<group>"; };
 		52EDBBD3234DE1400045A952 /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +85,7 @@
 		528CBF65234DD1BB00DE154C /* WorkoutTracker */ = {
 			isa = PBXGroup;
 			children = (
+				52ED73F623573CEC00C7ADAF /* WorkoutTracker.entitlements */,
 				52DDD239234E187C00A90010 /* Modules */,
 				528CBF8A234DDB6A00DE154C /* Common Views */,
 				528CBF7F234DDB2900DE154C /* Extensions */,
@@ -409,8 +411,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WorkoutTracker/WorkoutTracker.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkoutTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = H6H84BQCKE;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WorkoutTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -419,6 +425,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.WorkoutTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -428,8 +435,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WorkoutTracker/WorkoutTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkoutTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = H6H84BQCKE;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WorkoutTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -438,6 +448,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.WorkoutTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

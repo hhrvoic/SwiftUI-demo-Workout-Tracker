@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct WorkoutHistory: View {
+
     @EnvironmentObject private var historyStore: HistoryStore
     @State private var showingDeletionAlert = false
     @State private var indexToDelete: Int?

@@ -16,6 +16,15 @@ struct LogWorkout: View {
     @EnvironmentObject private var historyStore: HistoryStore
     
     @ObservedObject private var keyboard: KeyboardResponder = KeyboardResponder()
+    
+    // On MacOS, default NavigationViewStyle is DoubleColumnNavigationViewStyle (Master-Detail view). Making it single view on Mac with this little read-only var
+    var navigationStyle: some NavigationViewStyle {
+        #if targetEnvironment(macCatalyst)
+        return StackNavigationViewStyle()
+        #else
+        return DefaultNavigationViewStyle()
+        #endif
+    }
 
     var body: some View {
         NavigationView {
@@ -38,13 +47,15 @@ struct LogWorkout: View {
                                  action: {
                                     self.logWorkout(mood: self.mood, description: self.description)
                 })
-                .offset(x: 0, y: self.keyboard.currentHeight == 0 ? 0 : -156) // Hardcoded for now
+                    .offset(x: 0, y: self.keyboard.currentHeight == 0 ? 0 : -156) // Hardcoded for now
             }
             .padding(.top, 70)
-            .offset(x: 0, y: self.keyboard.currentHeight == 0 ? 0 : -40)  // Hardcoded for now
-            .animation(.default)
-            .navigationBarTitle("Log workout")
-        }.alert(isPresented: $showingAlert, content: createAlert)
+                .offset(x: 0, y: self.keyboard.currentHeight == 0 ? 0 : -40)  // Hardcoded for now
+                .animation(.default)
+                .navigationBarTitle("Log workout")
+        }
+        .navigationViewStyle(navigationStyle)
+        .alert(isPresented: $showingAlert, content: createAlert)
     }
     
 }
