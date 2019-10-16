@@ -1,3 +1,3 @@
-# workout-tracker-swift-ui
+# Workout tracker
 
 SwiftUI app demo.
